@@ -1,5 +1,3 @@
-import { Signature, PrivateKey, isReady, Field } from 'snarkyjs';
-
 export async function onRequest(context) {
   // Contents of context object
   // const {
@@ -10,8 +8,6 @@ export async function onRequest(context) {
   //   next, // used for middleware or to fetch assets
   //   data, // arbitrary space for passing data between middlewares
   // } = context;
-
-  await isReady;
 
   const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=mina-protocol&vs_currencies=usd`);
   const data = await res.json();
